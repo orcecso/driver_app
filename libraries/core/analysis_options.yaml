@@ -1,0 +1,114 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "lib/generated/**"
+    - "lib/l10n/**"
+    - "test/**"
+
+  errors:
+    missing_required_param: error
+    missing_return: error
+    dead_code: error
+    unused_import: error
+    unused_local_variable: error
+    avoid_positional_boolean_parameters: ignore
+
+linter:
+  rules:
+    # Code Style
+    prefer_const_constructors: true
+    prefer_const_literals_to_create_immutables: true
+    prefer_final_fields: true
+    prefer_final_locals: true
+    prefer_single_quotes: true
+    prefer_relative_imports : false
+    avoid_print: true
+    unnecessary_this: true
+    unnecessary_const: true
+    unnecessary_late: true
+
+    # Maintainability
+    avoid_redundant_argument_values: false
+    avoid_returning_null_for_future: true
+
+    # Readability
+    sort_constructors_first: true
+    type_annotate_public_apis: true
+    require_trailing_commas: true
+    avoid_positional_boolean_parameters: true
+
+    always_declare_return_types: true       # help public API clarity
+    annotate_overrides: true
+    prefer_typing_uninitialized_variables: true
+
+dart_code_metrics:
+  metrics:
+    - cyclomatic-complexity: 15
+    - lines-of-code: 50
+    - maximum-nesting-level: 4
+    - number-of-parameters: 5
+    - number-of-methods: 20
+
+  anti-patterns:
+    - long-method
+    - long-parameter-list
+    - god-class
+
+  extends:
+    - package:dart_code_metrics/presets/all.yaml
+
+  rules:
+    - avoid-dynamic: true
+    - avoid-nested-conditional-expressions: true
+    - avoid-unnecessary-type-casts: true
+    - avoid-unnecessary-type-assertions: true
+    - prefer-const-constructors
+    - prefer-final-fields
+    - prefer-single-widget-per-file
+    - prefer-extracting-callbacks
+    - prefer-early-return
+    - avoid-duplicate-code
+    - prefer-moving-to-variable:
+        allowed-duplicated-chains: 3
+    - prefer-match-file-name:
+        exclude:
+          - test/**
+          - lib/main.dart
+    - member-ordering:
+        widgets-order:
+          - init-state-method
+          - did-change-dependencies-method
+          - did-update-widget-method
+          - build-method
+          - dispose-method
+    - format-comment:
+        only-doc-comments: true
+    - newline-before-return
+    - no-magic-number: true
+    - avoid-unnecessary-else
+    - avoid-empty-else
+    - - avoid-ignoring-return-values         # don't ignore important returns
+    - avoid-ignoring-futures               # catch missing await / unhandled Futures
+    - avoid-empty-catches                  # no silent catch blocks
+    - avoid-catches-without-on-clause     # catch specific exceptions where possible
+    - avoid-throwing-raw-exceptions        # prefer Exception subclasses / domain errors
+    - prefer-early-return                  # encourage guard clauses
+    - missing-enum-case                    # force handling all enum values
+    - prefer-switch-over-if-else           # clearer multi-branch code
+    - avoid-nested-conditional-expressions # avoid nested ? : chains
+    - avoid-duplicate-code                 # flag copy/paste logic
+    - prefer-extracting-callbacks          # keep widgets reusable & testable
+    - prefer-single-widget-per-file        # one widget class per file for clarity
+    - avoid-long-method                    # keep functions short and testable
+    - long-parameter-list                   # flag many params (encourage objects/DTOs)
+    - god-class                             # flag classes that do too much
+    - no-magic-number: true                 # discourage unexplained numeric literals
+    - newline-before-return: true
+
+  metrics-exclude:
+    - test/**
+    - lib/generated/**
+    - lib/l10n/**

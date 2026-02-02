@@ -1,0 +1,7 @@
+targets:
+  $default:
+    builders:
+      envied_generator|envied:
+        options:
+          path: envs/file.env
+          override: true
