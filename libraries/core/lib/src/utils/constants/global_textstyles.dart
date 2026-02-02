@@ -1,6 +1,7 @@
-import 'package:core/core.dart';
+import 'package:core/src/utils/helpers/size_scaler.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'global_colors.dart';
 
 class GlobalTextStyles {
   GlobalTextStyles._();

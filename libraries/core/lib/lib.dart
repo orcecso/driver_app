@@ -1,1 +1,9 @@
-// import all files from this core folder here so that when importing on main lib, it should be easy
+export 'src/gen/gen.dart';
+export 'src/utils/constants/custom_regex.dart';
+export 'src/utils/constants/global_colors.dart';
+export 'src/utils/constants/global_constants.dart';
+export 'src/utils/constants/global_paddings.dart';
+export 'src/utils/constants/global_textstyles.dart';
+export 'src/utils/constants/global_variables.dart';
+export 'src/utils/enums/environment_enums.dart';
+export 'src/utils/helpers/size_scaler.dart';

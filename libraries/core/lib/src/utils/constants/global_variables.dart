@@ -1,4 +1,4 @@
-import 'package:core/core.dart';
+import 'package:core/src/utils/helpers/size_scaler.dart';
 
 class GlobalVariables {
   GlobalVariables._();

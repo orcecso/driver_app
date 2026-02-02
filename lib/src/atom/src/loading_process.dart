@@ -1,4 +1,4 @@
-import 'package:core/core.dart';
+import 'package:core/lib.dart';
 import 'package:flutter/material.dart';
 
 class LoadingProcess extends StatelessWidget {
@@ -15,9 +15,7 @@ class LoadingProcess extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
           padding: const EdgeInsets.all(18),
-          child: const CircularProgressIndicator(
-            color: GlobalColors.primary,
-          ),
+          child: const CircularProgressIndicator(color: GlobalColors.red),
         ),
       ),
     );

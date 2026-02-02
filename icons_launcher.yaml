@@ -1,0 +1,27 @@
+# to run this
+# flutter pub get
+# dart run icons_launcher:create
+icons_launcher:
+  image_path: "assets/appstore.png"
+  platforms:
+    android:
+      enable: true
+      image_path: "assets/appstore.png"
+      notification_image: "assets/appstore.png"
+      adaptive_background_image: "assets/appstore.png"
+      adaptive_foreground_image: "assets/appstore.png"
+      adaptive_round_image: "assets/appstore.png"
+    ios:
+      enable: true
+      image_path: "assets/appstore.png"
+      tinted_path: "assets/appstore.png"
+      dark_path: "assets/appstore.png"
+
+    web:
+      enable: false
+    macos:
+      enable: false
+    windows:
+      enable: false
+    linux:
+      enable: false

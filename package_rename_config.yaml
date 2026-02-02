@@ -1,0 +1,16 @@
+# dart run package_rename
+# original app_name : 
+
+# original package name : 
+package_rename_config:
+  android:
+    app_name: sampleNameHere
+    package_name: com.sample.here
+
+  ios:
+    app_name: sampleNameHere
+    package_name: com.sample.here
+
+  web:
+    app_name: sampleNameHere
+    package_name: com.sample.here
